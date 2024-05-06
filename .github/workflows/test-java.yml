@@ -12,9 +12,11 @@ jobs:
             distribution: 'temurin'
         - name: List current dir
           run: ls -la
-        - name: Move to maven project dir
-          run: cd ./rest-kotlin-maven
-        - name: List current dir
-          run: ls -la
+          working-directory: rest-kotlin-maven
+        # - name: Move to maven project dir
+        #   run: cd ./rest-kotlin-maven
+        # - name: List current dir
+        #   run: ls -la
         - name: Run the Maven command
           run: mvn clean install
+          working-directory: rest-kotlin-maven
