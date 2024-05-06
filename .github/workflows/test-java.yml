@@ -10,7 +10,11 @@ jobs:
           with:
             java-version: '21'
             distribution: 'temurin'
+        - name: List current dir
+          run: ls -la
         - name: Move to maven project dir
-          run: cd rest-kotlin-maven  
+          run: cd rest-kotlin-maven
+        - name: List current dir
+          run: ls -la
         - name: Run the Maven command
           run: mvn clean install
