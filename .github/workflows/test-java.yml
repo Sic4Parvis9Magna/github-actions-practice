@@ -20,7 +20,7 @@ jobs:
           run: ls -la
         - name: List gradle dir
           run: ls -la
-          working-directory: rest-kotlin-gralde
+          working-directory: rest-kotlin-gradle
         - name: Build with Gradle
           run: ./gradlew clean build
-          working-directory: rest-kotlin-gralde
+          working-directory: rest-kotlin-gradle
