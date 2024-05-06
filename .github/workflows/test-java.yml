@@ -10,13 +10,17 @@ jobs:
           with:
             java-version: '21'
             distribution: 'temurin'
-        - name: List current dir
+        - name: List maven dir
           run: ls -la
           working-directory: rest-kotlin-maven
-        # - name: Move to maven project dir
-        #   run: cd ./rest-kotlin-maven
-        # - name: List current dir
-        #   run: ls -la
-        - name: Run the Maven command
+        - name: Build with Maven
           run: mvn clean install
           working-directory: rest-kotlin-maven
+        - name: List current dir
+          run: ls -la
+        - name: List gradle dir
+          run: ls -la
+          working-directory: rest-kotlin-gralde
+        - name: Build with Gradle
+          run: ./gradlew clean build
+          working-directory: rest-kotlin-gralde
